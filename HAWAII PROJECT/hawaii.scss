@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif TC", serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: white;
+  box-shadow: 0 5px 10px -1px rgb(84, 83, 83);
+  transition: all 0.5s ease;
+
+  div.log {
+    flex: 3 1 400px;
+    display: flex;
+    margin-left: 1.35rem;
+    img {
+      margin: 0.5rem 0;
+      width: 6vw;
+      height: 6vh;
+    }
+    align-items: center;
+  }
+  nav {
+    flex: 2 1 400px;
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+    }
+    li a {
+      text-decoration: none;
+      color: #227eb3;
+      font-size: 1.35rem;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  header div.log {
+    margin-left: 0.5rem;
+    img {
+      width: 15vw;
+      height: 15vw;
+    }
+  }
+}
+main {
+  section.background {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background-image: url(./resource/Pictures/pexels-photo-416676.jpeg);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 3.5rem;
+      color: white;
+    }
+
+    .start {
+      padding: 0.75rem 1.85rem;
+      margin: 2rem;
+      background-color: #21a3ce;
+      border: none;
+      border-radius: 1.2rem;
+      color: white;
+      font-size: 1.9rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    div.fliter {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      min-height: 90vh;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  section.second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // 在一條綫上水平對齊
+    align-items: center;
+    // 對齊方式：居中
+    h2 {
+      font-size: 2rem;
+    }
+    h2.firstSentense {
+      margin-top: 3.85rem;
+    }
+    h2.secSentense {
+      color: #287fb0;
+      margin-bottom: 2rem;
+    }
+    div.cards {
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      min-height: 80vh;
+      div.card {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        //可以连用，均匀分开的状态在中间那块对齐
+        flex: 2 2 300px;
+        div.imgbox {
+          overflow: hidden;
+          width: 15rem;
+          border-radius: 50%;
+          img {
+            margin-bottom: 1rem;
+            width: 15rem;
+            border-radius: 50%;
+            transition: all ease 0.2s;
+          }
+          img:hover {
+            transform: scale(1.2);
+          }
+        }
+        h4 {
+          font-size: 2rem;
+          margin: 1rem 0rem;
+        }
+        p {
+          font-size: 1.25rem;
+        }
+        a {
+          margin: 1rem 0.25rem;
+          text-decoration: none;
+          padding: 0.5rem 0.5rem;
+          background-color: #1ebcc5;
+          font-size: 1.25rem;
+          color: white;
+          border-radius: 6.5%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  section.second {
+    div.cards {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+footer {
+  background-color: rgb(142, 142, 142);
+  min-height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  div.log {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 6vw;
+      height: 6vh;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+  div.nav {
+    display: flex;
+    margin: 1.2rem;
+    ul {
+      display: flex;
+      list-style-type: none;
+      width: 100%;
+      align-items: center;
+      li {
+        display: flex;
+        a {
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+          margin: 0.8rem;
+        }
+      }
+    }
+  }
+
+  div.links {
+    a {
+      margin: 0.5rem;
+      img {
+        width: 5vw;
+        height: 5vh;
+      }
+    }
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lightgrey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(69, 169, 199);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@media screen and(max-width:1000) {
+  div.nav {
+    width: 100%;
+    ul {
+      li {
+        a {
+          margin: 0.3rem;
+        }
+      }
+    }
+  }
+}
